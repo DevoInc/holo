@@ -7,7 +7,9 @@
     "test": "jest --coverage",
     "lint": "npx eslint src",
     "stryker": "npx stryker run",
-    "build": "vite build"
+    "build": "vite build",
+    "release": "release-it --dry-run",
+    "release:ci": "release-it --ci"
   },
   "types": "./dist/index.d.ts",
   "main": "./dist/index.umd.js",
