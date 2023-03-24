@@ -98,7 +98,7 @@ jobs:
 
 
   release:
-    needs: [lint, unit-test]
+    needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
