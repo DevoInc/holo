@@ -19,7 +19,7 @@ on:
         default: auto
         required: true
 
-run-name: release ${{ inputs.version }}${{ inputs.dry == 'true' && ' (--dry-run)' || '' }}
+run-name: release ${{ github.event.inputs.version }}${{ github.event.inputs.dry == 'true' && ' (--dry-run)' || '' }}
 
 env:
   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
