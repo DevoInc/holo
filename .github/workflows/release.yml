@@ -98,7 +98,6 @@ jobs:
       - name: Run linter
         run: npm run lint
 
-
   release:
     needs: [lint, test]
     runs-on: ubuntu-latest
@@ -130,6 +129,9 @@ jobs:
         run: |
           git config --global user.name 'Devo GitHub Action'
           git config --global user.email 'desa@devo.com'
+
+      - name: Build
+        run: npm run build
 
       - name: Publish ${{ github.event.inputs.version }}${{ github.event.inputs.dry == 'true' && ' (--dry-run)' || '' }}
         run: npm run release:ci -- ${{ github.event.inputs.version != 'auto' && github.event.inputs.version || '' }}${{ github.event.inputs.dry == 'true' && ' --dry-run' || '' }}
