@@ -1,5 +1,7 @@
 # Changelog
 
+### [1.0.1](https://github.com/DevoInc/holo/compare/1.0.0...1.0.1) (2023-03-31)
+
 ## 1.0.0 (2023-03-27)
 
 
