@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.3](https://github.com/DevoInc/holo/compare/1.0.2...1.0.3) (2023-04-03)
+
+
+### Bug Fixes
+
+* faker peerdependecie version 6.3.1 ([3c52043](https://github.com/DevoInc/holo/commit/3c520438f9da52a84c6a0c9c0e0afa727944c22f))
+
 ### [1.0.2](https://github.com/DevoInc/holo/compare/1.0.1...1.0.2) (2023-04-03)
 
 
