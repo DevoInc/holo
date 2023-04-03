@@ -34,7 +34,7 @@
   "license": "MIT",
   "prettier": "@devoinc/prettier-config",
   "peerDependencies": {
-    "@faker-js/faker": ">=6.x",
+    "@faker-js/faker": ">=6.3.1",
     "chance": ">=1"
   },
   "devDependencies": {
