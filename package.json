@@ -1,6 +1,6 @@
 {
   "name": "@devoinc/holo",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a tool for create dataset structures based on faker and chance",
   "author": "Devo desa@devo.com",
   "scripts": {

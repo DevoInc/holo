@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.5](https://github.com/DevoInc/holo/compare/1.0.4...1.0.5) (2023-04-04)
+
+
+### Bug Fixes
+
+* remove faker default export ([3066769](https://github.com/DevoInc/holo/commit/306676961f5349edd35437cbedfaee1c994ad1a6))
+
 ### [1.0.4](https://github.com/DevoInc/holo/compare/1.0.3...1.0.4) (2023-04-04)
 
 
