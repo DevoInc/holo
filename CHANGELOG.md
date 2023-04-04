@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.4](https://github.com/DevoInc/holo/compare/1.0.3...1.0.4) (2023-04-04)
+
+
+### Bug Fixes
+
+* peerDependencie faker  equal 6.3.1 ([3849209](https://github.com/DevoInc/holo/commit/3849209505b9684865b5795e0c60e9c48cbe791d))
+
 ### [1.0.3](https://github.com/DevoInc/holo/compare/1.0.2...1.0.3) (2023-04-03)
 
 
