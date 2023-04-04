@@ -1,5 +1,5 @@
 import Chance from 'chance';
-import faker from '@faker-js/faker';
+import { faker } from '@faker-js/faker';
 
 import * as holoTypes from './types';
 import type { Item, Type, Types, CustomTypes } from './declarations';
