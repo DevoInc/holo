@@ -1,5 +1,15 @@
 # Changelog
 
+## [2.0.0](https://github.com/DevoInc/holo/compare/1.0.6...2.0.0) (2024-11-06)
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to ESM
+
+### Features
+
+* upgrade to ESM ([131b171](https://github.com/DevoInc/holo/commit/131b171a4ab04a1cceb683840d47f086476209f4))
+
 ### [1.0.6](https://github.com/DevoInc/holo/compare/1.0.5...1.0.6) (2024-11-06)
 
 
