@@ -1,5 +1,4 @@
 name: release
-
 on:
   workflow_dispatch:
     inputs:
@@ -28,50 +27,25 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Cache node modules
-        id: cache-npm
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.sha }}
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/setup-node
 
-      - name: Set Node v20
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          registry-url: https://registry.npmjs.org/
-
-      - name: Install dependencies
-        run: npm ci
+      - name: Generate dist
+        run: npm run build
 
   test:
     needs: [build]
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Use node modules cache
-        id: cache-npm
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.sha }}
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/setup-node
 
       - name: Run tests
         run: npm t
@@ -79,21 +53,12 @@ jobs:
   lint:
     needs: [build]
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repo
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
 
-      - name: Use node modules cache
-        id: cache-npm
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.sha }}
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/setup-node
 
       - name: Run linter
         run: npm run lint
@@ -102,28 +67,13 @@ jobs:
     needs: [lint, test]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout 🛎️
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set node v18
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-          cache: 'npm'
-          registry-url: https://registry.npmjs.org/
-
-      - name: Use node modules cache
-        id: cache-npm
-        uses: actions/cache@v4
-        env:
-          cache-name: cache-node-modules
-        with:
-          path: |
-            node_modules
-            ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ github.sha }}
+      - name: Setup Node.js ⚙️ - Cache dependencies ⚡ - Install dependencies 🔧
+        uses: ./.github/workflows/setup-node
 
       - name: Setup Git config
         run: |

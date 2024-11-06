@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { Holo } from './Holo';
 
 describe('Holo', () => {
@@ -16,7 +18,7 @@ describe('Holo', () => {
         .addType('test', Holo.types.sequentialTimestamp())
         .schema({ test: 'test' })
         .repeat(2)
-        .generate()
+        .generate(),
     ).toEqual([{ test: now }, { test: now + 1000 }]);
   });
 
@@ -28,7 +30,7 @@ describe('Holo', () => {
         .addType('test', Holo.types.sequentialTimestamp())
         .schema({ test: Holo.of().schema('test').repeat(2) })
         .repeat(2)
-        .generate()
+        .generate(),
     ).toEqual([{ test: [now, now + 1000] }, { test: [now, now + 1000] }]);
   });
 });

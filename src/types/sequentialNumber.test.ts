@@ -1,3 +1,5 @@
+import { describe, it, expect } from 'vitest';
+
 import { sequentialNumbers } from './sequentialNumber';
 
 describe('types', () => {
