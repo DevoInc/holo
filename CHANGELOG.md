@@ -1,5 +1,7 @@
 # Changelog
 
+## [2.0.1](https://github.com/DevoInc/holo/compare/2.0.0...2.0.1) (2024-12-02)
+
 ## [2.0.0](https://github.com/DevoInc/holo/compare/1.0.6...2.0.0) (2024-11-06)
 
 ### ⚠ BREAKING CHANGES
